@@ -1,0 +1,10 @@
+cd catkin_ws/
+source devel/setup.bash
+roscore
+roslaunch socspioneer keyboard_teleop.launch
+rviz
+cd catkin_ws/src/socspioneer/data
+rosrun map_server map_server lgfloor.yaml
+cd catkin_ws/src/socspioneer/data
+rosrun stage_ros stageros lgfloor.world
+rosrun pf_localisation0 node.py
